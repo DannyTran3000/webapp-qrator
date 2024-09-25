@@ -18,19 +18,25 @@ html body a {
   color: #fff;
   text-decoration: none;
 }
+html body button, html body input {
+  color: #fff;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 html body li {
   list-style: none;
 }
 html body .wrapper {
   position: relative;
-  max-width: 1024px;
-  margin: 0 auto;
 }
 html body .wrapper__container {
   position: relative;
   z-index: 2;
+  max-width: 1024px;
   height: 100vh;
-  padding: 8px 0 64px 0;
+  margin: 0 auto;
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
 }
@@ -41,6 +47,7 @@ html body .wrapper__background {
   z-index: 1;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 html body .wrapper__background::before, html body .wrapper__background::after {
   position: absolute;
@@ -64,13 +71,17 @@ html body .wrapper__background::after {
   transform: translate(50%, -20%);
 }
 html body .wrapper__content {
-  padding-top: 64px;
   flex: 1;
+}
+html body .navigation {
+  padding: 32px;
 }
 html body .navigation__menu {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+}
+html body .navigation__menu-item {
+  margin: 0 16px 32px 16px;
 }
 html body .format-panel {
   position: relative;
@@ -132,12 +143,75 @@ html body .main-panel {
   border-radius: 8px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
 }
-html body .main-panel__input {
-  width: 60%;
+html body .main-panel__navigation {
+  width: 304px;
   min-height: 200px;
 }
-html body .main-panel__output {
+html body .main-panel__content {
+  padding: 32px;
+  display: flex;
   flex: 1;
+  flex-wrap: wrap;
   background: #333;
   border-radius: 8px;
+}
+html body .form {
+  display: none;
+}
+html body .form.--show {
+  display: block;
+}
+html body .input-group {
+  max-width: 290px;
+  margin-bottom: 32px;
+}
+html body .input-group:last-child {
+  margin-bottom: 0;
+}
+html body .input-group__label {
+  margin-bottom: 8px;
+  display: block;
+  color: #525252;
+}
+html body .input-group input {
+  width: 100%;
+  height: 36px;
+  padding: 0 16px;
+  background: rgba(51, 51, 51, 0.8);
+  border: 1px solid #525252;
+  border-radius: 6px;
+  outline: none;
+}
+html body .qr__input {
+  width: 290px;
+}
+html body .qr__code {
+  padding-left: 32px;
+  flex: 1;
+}
+html body .qr__frame {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+html body .qr__frame > img, html body .qr__frame > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+}
+html body .submit-btn {
+  margin-top: 32px;
+  padding: 16px;
+  background: #FDB623;
+  border-radius: 6px;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
