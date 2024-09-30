@@ -27,10 +27,11 @@ html body button, html body input {
 html body li {
   list-style: none;
 }
-html body .wrapper {
+
+.wrapper {
   position: relative;
 }
-html body .wrapper__container {
+.wrapper__container {
   position: relative;
   z-index: 2;
   max-width: 1024px;
@@ -40,7 +41,7 @@ html body .wrapper__container {
   display: flex;
   flex-direction: column;
 }
-html body .wrapper__background {
+.wrapper__background {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,7 +50,7 @@ html body .wrapper__background {
   height: 100vh;
   overflow: hidden;
 }
-html body .wrapper__background::before, html body .wrapper__background::after {
+.wrapper__background::before, .wrapper__background::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -63,27 +64,29 @@ html body .wrapper__background::before, html body .wrapper__background::after {
   content: "";
   pointer-events: none;
 }
-html body .wrapper__background::after {
+.wrapper__background::after {
   top: 0;
   right: 0;
   bottom: unset;
   left: unset;
   transform: translate(50%, -20%);
 }
-html body .wrapper__content {
+.wrapper__content {
   flex: 1;
 }
-html body .navigation {
+
+.navigation {
   padding: 32px;
 }
-html body .navigation__menu {
+.navigation__menu {
   display: flex;
   flex-wrap: wrap;
 }
-html body .navigation__menu-item {
+.navigation__menu-item {
   margin: 0 16px 32px 16px;
 }
-html body .format-panel {
+
+.format-panel {
   position: relative;
   width: 86px;
   height: 82px;
@@ -99,23 +102,23 @@ html body .format-panel {
   transition: all 0.25s;
   cursor: pointer;
 }
-html body .format-panel:hover {
+.format-panel:hover {
   box-shadow: none;
 }
-html body .format-panel:hover::after {
+.format-panel:hover::after {
   opacity: 1;
 }
-html body .format-panel.--active {
+.format-panel.--active {
   box-shadow: none;
   color: #fff;
 }
-html body .format-panel.--active::after {
+.format-panel.--active::after {
   opacity: 1;
 }
-html body .format-panel.--active svg path {
+.format-panel.--active svg path {
   fill: #FDB623;
 }
-html body .format-panel::after {
+.format-panel::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -126,11 +129,12 @@ html body .format-panel::after {
   content: "";
   transition: opacity 0.25s;
 }
-html body .format-panel > span {
+.format-panel > span {
   margin-top: 8px;
   font-size: 12px;
 }
-html body .main-panel {
+
+.main-panel {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -143,11 +147,11 @@ html body .main-panel {
   border-radius: 8px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
 }
-html body .main-panel__navigation {
+.main-panel__navigation {
   width: 304px;
   min-height: 200px;
 }
-html body .main-panel__content {
+.main-panel__content {
   padding: 32px;
   display: flex;
   flex: 1;
@@ -155,25 +159,27 @@ html body .main-panel__content {
   background: #333;
   border-radius: 8px;
 }
-html body .form {
+
+.form {
   display: none;
 }
-html body .form.--show {
+.form.--show {
   display: block;
 }
-html body .input-group {
+
+.input-group {
   max-width: 290px;
   margin-bottom: 32px;
 }
-html body .input-group:last-child {
+.input-group:last-child {
   margin-bottom: 0;
 }
-html body .input-group__label {
+.input-group__label {
   margin-bottom: 8px;
   display: block;
   color: #525252;
 }
-html body .input-group input {
+.input-group input {
   width: 100%;
   height: 36px;
   padding: 0 16px;
@@ -182,14 +188,15 @@ html body .input-group input {
   border-radius: 6px;
   outline: none;
 }
-html body .qr__input {
+
+.qr__input {
   width: 290px;
 }
-html body .qr__code {
+.qr__code {
   padding-left: 32px;
   flex: 1;
 }
-html body .qr__frame {
+.qr__frame {
   position: relative;
   width: 100%;
   height: 0;
@@ -197,7 +204,7 @@ html body .qr__frame {
   overflow: hidden;
   background: #fff;
 }
-html body .qr__frame > img, html body .qr__frame > svg {
+.qr__frame > img, .qr__frame > svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -205,7 +212,8 @@ html body .qr__frame > img, html body .qr__frame > svg {
   height: 95%;
   transform: translate(-50%, -50%);
 }
-html body .submit-btn {
+
+.submit-btn {
   margin-top: 32px;
   padding: 16px;
   background: #FDB623;
